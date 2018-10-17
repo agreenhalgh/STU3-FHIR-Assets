@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OperationOutcome xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/supa1/Desktop/STU3%20Schemas/operationoutcome.xsd">
+<meta>
+	<profile value="https://fhir.nhs.uk/STU3/StructureDefinition/eRS-OperationOutcome-1"/>
+</meta>
+	<issue>
+		<extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-eRS-OperationOutcomeElementName-1">
+			<valueString value="indicativeAppointmentWaitTimeLimit"/>
+		</extension>
+		<extension url="https://fhir.nhs.uk/STU3/StructureDefinition/Extension-eRS-OperationOutcomeElementValue-1">
+			<valueString value="17"/>
+		</extension>
+		<severity value="fatal"/>
+		<code value="business-rule"/>
+		<details>
+			<coding>
+				<system value="https://fhir.nhs.uk/STU3/CodeSystem/eRS-APIErrorCode-1"/>
+				<code value="INVALID_VALUE"/>
+				<display value="Invalid value"/>
+			</coding>
+		</details>
+		<diagnostics value="A Priority of TWO_WEEK_WAIT does not support filtering or sorting by Indicative Appointment Wait Time"/>
+		<location value="/0/jsonpointer"/>
+	</issue>
+</OperationOutcome>
