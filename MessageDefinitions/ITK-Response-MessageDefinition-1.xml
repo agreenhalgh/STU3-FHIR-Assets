@@ -292,7 +292,7 @@
       </valueReference>
      </extension>
      <extension url="version">
-      <valueString value="1.1.0"/>
+      <valueString value="1.2.0"/>
      </extension>
     </extension>
    </extension>
