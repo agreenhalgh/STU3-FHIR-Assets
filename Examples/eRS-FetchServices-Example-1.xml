@@ -1,7 +1,59 @@
-<List xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir file:///C:/Users/supa1/Desktop/STU3%20Schemas/list.xsd">
+<List xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<meta>
 		<profile value="https://fhir.nhs.uk/STU3/StructureDefinition/eRS-FetchServices-List-1"/>
 	</meta>
+	<contained>
+		<Practitioner>
+			<id value="1"/>
+			<meta>
+				<profile value="https://fhir.nhs.uk/STU3/StructureDefinition/eRS-Practitioner-1"/>
+			</meta>
+			<identifier>
+				<system value="https://fhir.nhs.uk/Id/sds-user-id"/>
+				<value value="443556876110"/>
+			</identifier>
+		</Practitioner>
+	</contained>
+	<contained>
+		<Practitioner>
+			<id value="2"/>
+			<meta>
+				<profile value="https://fhir.nhs.uk/STU3/StructureDefinition/eRS-Practitioner-1"/>
+			</meta>
+			<identifier>
+				<system value="https://fhir.nhs.uk/Id/sds-user-id"/>
+				<value value="556532120987"/>
+			</identifier>
+		</Practitioner>
+	</contained>
+	<contained>
+		<HealthcareService>
+			<id value="4"/>
+			<meta>
+				<profile value="https://fhir.nhs.uk/STU3/StructureDefinition/eRS-HealthcareService-1"/>
+			</meta>
+			<identifier>
+				<system value="http://fhir.nhs.net/Id/ers-service"/>
+				<value value="ESS22"/>
+			</identifier>
+			<location>
+				<reference value="#10"/>
+			</location>
+			<name value="The Exeter Triage Serice"/>
+		</HealthcareService>
+	</contained>
+	<contained>
+		<Location>
+			<id value="10"/>
+			<meta>
+				<profile value="https://fhir.nhs.uk/STU3/StructureDefinition/eRS-Location-1"/>
+			</meta> 
+			<identifier>
+				<system value="https://directory.spineservices.nhs.uk/STU3/Organization"/>
+				<value value="EX01"/>
+			</identifier>		
+		</Location>
+	</contained>
 	<status value="current"/>
 	<mode value="working"/>
 	<entry>
@@ -17,14 +69,8 @@
 			</extension>
 			<extension url="authorisedPathwayService">
 				<valueReference>
-					<reference value="https://ers/HealthcareService/108968619"/>
+					<reference value="#4"/>
 					<display value="The Exeter Triage Serice"/>
-				</valueReference>
-			</extension>
-			<extension url="authorisedPathwayService">
-				<valueReference>
-					<reference value="https://ers/HealthcareService/82625192"/>
-					<display value="The Exmouth Assessment Service"/>
 				</valueReference>
 			</extension>
 			<extension url="indicativeAppointmentWaitTime">
@@ -46,7 +92,7 @@
 				<extension url="serviceName">
 					<valueString value="Ear, Nose &amp; Throat"/>
 				</extension>
-				<extension url="requestFlowType">
+				<extension url="supportedRequestFlowType">
 					<valueCoding>
 						<system value="https://fhir.nhs.uk/STU3/CodeSystem/eRS-RequestFlowType-1"/>
 						<code value="APPOINTMENT_REQUEST"/>
@@ -80,13 +126,13 @@
 				</extension>
 				<extension url="location">
 					<valueReference>
-						<reference value="https://ers/Location/836291"/>
+						<reference value="#10"/>
 						<display value="Royal Devon and Exeter hospital"/>
 					</valueReference>
 				</extension>
 				<extension url="namedClinician">
 					<valueReference>
-						<reference value="https://ers/Practitioner/66281]"/>
+						<reference value="#1"/>
 						<display value="Helen Smith"/>
 					</valueReference>
 				</extension>
@@ -142,7 +188,7 @@
 					<valueBoolean value="false"/>
 				</extension>
 			</extension>
-			<reference value="HealthcareService/00001234567890"/>
+			<reference value="#4"/>
 			<display value="Cardiology - General - Royal Devon and Exeter Hospital"/>
 		</item>
 	</entry>
@@ -158,7 +204,11 @@
 				<valueBoolean value="false"/>
 			</extension>
 			<extension url="indicativeAppointmentWaitTime">
-				<valueUnsignedInt value="2"/>
+				<valueCoding>
+					<system value="https://fhir.nhs.uk/STU3/CodeSystem/eRS-IWT-1"/>
+					<code value="NOT_APPLICABLE"/>
+					<display value="Not Applicable"/>
+				</valueCoding>
 			</extension>
 			<extension url="displayProminently">
 				<valueBoolean value="false"/>
@@ -176,7 +226,7 @@
 				<extension url="serviceName">
 					<valueString value="Service"/>
 				</extension>
-				<extension url="requestFlowType">
+				<extension url="supportedRequestFlowType">
 					<valueCoding>
 						<system value="https://fhir.nhs.uk/STU3/CodeSystem/eRS-RequestFlowType-1"/>
 						<code value="APPOINTMENT_REQUEST"/>
@@ -190,6 +240,9 @@
 						<display value="Limited Capacity"/>
 					</valueCoding>
 				</extension>
+				<extension url="indicativeTreatmentWaitTime">
+					<valueCode value="NOT_REPORTING"/>
+				</extension>
 				<extension url="bookableType">
 					<valueCoding>
 						<system value="https://fhir.nhs.uk/STU3/CodeSystem/eRS-BookableType-1"/>
@@ -202,19 +255,19 @@
 				</extension>
 				<extension url="location">
 					<valueReference>
-						<reference value="https://ers/Location/9164992"/>
+						<reference value="#10"/>
 						<display value="Heavitree hospital, Exeter"/>
 					</valueReference>
 				</extension>
 				<extension url="namedClinician">
 					<valueReference>
-						<reference value="https://ers/Practitioner/63429202"/>
+						<reference value="#1"/>
 						<display value="Richard Palmer"/>
 					</valueReference>
 				</extension>
 				<extension url="namedClinician">
 					<valueReference>
-						<reference value="https://ers/Practitioner/8775522"/>
+						<reference value="#2"/>
 						<display value="Anna Foster"/>
 					</valueReference>
 				</extension>
