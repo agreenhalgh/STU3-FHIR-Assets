@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-Patient-1" />
+  <name value="PharmacyConnect-DM-Patient-1" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-GPC-Patient-1" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient.extension:registrationDetails">
+      <path value="Patient.extension" />
+      <sliceName value="registrationDetails" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:ethnicCategory">
+      <path value="Patient.extension" />
+      <sliceName value="ethnicCategory" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:religiousAffiliation">
+      <path value="Patient.extension" />
+      <sliceName value="religiousAffiliation" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:patient-cadavericDonor">
+      <path value="Patient.extension" />
+      <sliceName value="patient-cadavericDonor" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:patient-cadavericDonor.valueBoolean:valueBoolean">
+      <path value="Patient.extension.valueBoolean" />
+      <sliceName value="valueBoolean" />
+    </element>
+    <element id="Patient.extension:residentialStatus">
+      <path value="Patient.extension" />
+      <sliceName value="residentialStatus" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:treatmentCategory">
+      <path value="Patient.extension" />
+      <sliceName value="treatmentCategory" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:nhsCommunication">
+      <path value="Patient.extension" />
+      <sliceName value="nhsCommunication" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:nhsCommunication.extension:preferred">
+      <path value="Patient.extension.extension" />
+      <sliceName value="preferred" />
+    </element>
+    <element id="Patient.extension:nhsCommunication.extension:preferred.valueBoolean:valueBoolean">
+      <path value="Patient.extension.extension.valueBoolean" />
+      <sliceName value="valueBoolean" />
+    </element>
+    <element id="Patient.extension:nhsCommunication.extension:interpreterRequired">
+      <path value="Patient.extension.extension" />
+      <sliceName value="interpreterRequired" />
+    </element>
+    <element id="Patient.extension:nhsCommunication.extension:interpreterRequired.valueBoolean:valueBoolean">
+      <path value="Patient.extension.extension.valueBoolean" />
+      <sliceName value="valueBoolean" />
+    </element>
+    <element id="Patient.extension:birthPlace">
+      <path value="Patient.extension" />
+      <sliceName value="birthPlace" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:nominatedPharmacy">
+      <path value="Patient.extension" />
+      <sliceName value="nominatedPharmacy" />
+      <max value="0" />
+    </element>
+    <element id="Patient.extension:deathNotificationStatus">
+      <path value="Patient.extension" />
+      <sliceName value="deathNotificationStatus" />
+      <max value="0" />
+    </element>
+    <element id="Patient.active">
+      <path value="Patient.active" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name:other">
+      <path value="Patient.name" />
+      <sliceName value="other" />
+      <max value="0" />
+    </element>
+    <element id="Patient.birthDate.extension:patient-birthTime">
+      <path value="Patient.birthDate.extension" />
+      <sliceName value="patient-birthTime" />
+    </element>
+    <element id="Patient.birthDate.extension:patient-birthTime.valueDateTime:valueDateTime">
+      <path value="Patient.birthDate.extension.valueDateTime" />
+      <sliceName value="valueDateTime" />
+    </element>
+    <element id="Patient.deceasedDateTime:deceasedDateTime">
+      <path value="Patient.deceasedDateTime" />
+      <sliceName value="deceasedDateTime" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <max value="1" />
+    </element>
+    <element id="Patient.address.use">
+      <path value="Patient.address.use" />
+      <min value="1" />
+      <fixedCode value="home" />
+    </element>
+    <element id="Patient.address.text">
+      <path value="Patient.address.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address.line">
+      <path value="Patient.address.line" />
+      <max value="5" />
+    </element>
+    <element id="Patient.address.country">
+      <path value="Patient.address.country" />
+      <max value="0" />
+    </element>
+    <element id="Patient.maritalStatus">
+      <path value="Patient.maritalStatus" />
+      <max value="0" />
+    </element>
+    <element id="Patient.multipleBirthBoolean:multipleBirthBoolean">
+      <path value="Patient.multipleBirthBoolean" />
+      <sliceName value="multipleBirthBoolean" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Contact" />
+      </extension>
+      <path value="Patient.contact" />
+      <max value="0" />
+    </element>
+    <element id="Patient.generalPractitioner">
+      <path value="Patient.generalPractitioner" />
+      <max value="0" />
+    </element>
+    <element id="Patient.managingOrganization">
+      <path value="Patient.managingOrganization" />
+      <max value="0" />
+    </element>
+    <element id="Patient.link">
+      <path value="Patient.link" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

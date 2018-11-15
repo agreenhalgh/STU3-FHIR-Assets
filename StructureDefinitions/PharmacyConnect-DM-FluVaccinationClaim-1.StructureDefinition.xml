@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-FluVaccinationClaim-1" />
+  <name value="PharmacyConnect-DM-FluVaccinationClaim-1" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Claim" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Claim" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Claim.identifier">
+      <path value="Claim.identifier" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Claim.status">
+      <path value="Claim.status" />
+      <max value="0" />
+    </element>
+    <element id="Claim.type">
+      <path value="Claim.type" />
+      <max value="0" />
+    </element>
+    <element id="Claim.subType">
+      <path value="Claim.subType" />
+      <max value="0" />
+    </element>
+    <element id="Claim.use">
+      <path value="Claim.use" />
+      <max value="0" />
+    </element>
+    <element id="Claim.patient">
+      <path value="Claim.patient" />
+      <max value="0" />
+    </element>
+    <element id="Claim.billablePeriod">
+      <path value="Claim.billablePeriod" />
+      <min value="1" />
+    </element>
+    <element id="Claim.billablePeriod.start">
+      <path value="Claim.billablePeriod.start" />
+      <min value="1" />
+    </element>
+    <element id="Claim.billablePeriod.end">
+      <path value="Claim.billablePeriod.end" />
+      <min value="1" />
+    </element>
+    <element id="Claim.created">
+      <path value="Claim.created" />
+      <max value="0" />
+    </element>
+    <element id="Claim.enterer">
+      <path value="Claim.enterer" />
+      <min value="1" />
+    </element>
+    <element id="Claim.enterer.reference">
+      <path value="Claim.enterer.reference" />
+      <min value="1" />
+    </element>
+    <element id="Claim.enterer.identifier">
+      <path value="Claim.enterer.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Claim.enterer.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Claim.enterer.display" />
+      <max value="0" />
+    </element>
+    <element id="Claim.insurer">
+      <path value="Claim.insurer" />
+      <max value="0" />
+    </element>
+    <element id="Claim.provider">
+      <path value="Claim.provider" />
+      <max value="0" />
+    </element>
+    <element id="Claim.priority">
+      <path value="Claim.priority" />
+      <max value="0" />
+    </element>
+    <element id="Claim.fundsReserve">
+      <path value="Claim.fundsReserve" />
+      <max value="0" />
+    </element>
+    <element id="Claim.related">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="RelatedClaim" />
+      </extension>
+      <path value="Claim.related" />
+      <max value="0" />
+    </element>
+    <element id="Claim.prescription">
+      <path value="Claim.prescription" />
+      <max value="0" />
+    </element>
+    <element id="Claim.originalPrescription">
+      <path value="Claim.originalPrescription" />
+      <max value="0" />
+    </element>
+    <element id="Claim.payee">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Payee" />
+      </extension>
+      <path value="Claim.payee" />
+      <max value="0" />
+    </element>
+    <element id="Claim.referral">
+      <path value="Claim.referral" />
+      <max value="0" />
+    </element>
+    <element id="Claim.facility">
+      <path value="Claim.facility" />
+      <min value="1" />
+    </element>
+    <element id="Claim.facility.reference">
+      <path value="Claim.facility.reference" />
+      <max value="0" />
+    </element>
+    <element id="Claim.facility.identifier">
+      <path value="Claim.facility.identifier" />
+      <short value="ODS code of pharmacy giving vaccination" />
+      <definition value="ODS code of pharmacy giving vaccination" />
+      <min value="1" />
+    </element>
+    <element id="Claim.facility.identifier.use">
+      <path value="Claim.facility.identifier.use" />
+      <max value="0" />
+    </element>
+    <element id="Claim.facility.identifier.type">
+      <path value="Claim.facility.identifier.type" />
+      <max value="0" />
+    </element>
+    <element id="Claim.facility.identifier.system">
+      <path value="Claim.facility.identifier.system" />
+      <short value="The namespace for ODS codes" />
+      <definition value="The namespace for ODS codes" />
+      <min value="1" />
+      <type>
+        <code value="uri" />
+        <profile value="https://fhir.nhs.uk/Id/ods-organization-code" />
+      </type>
+      <fixedUri value="https://fhir.nhs.uk/Id/ods-organization-code" />
+    </element>
+    <element id="Claim.facility.identifier.value">
+      <path value="Claim.facility.identifier.value" />
+      <short value="The organisation ODS code" />
+      <definition value="The organisation ODS code" />
+      <min value="1" />
+    </element>
+    <element id="Claim.facility.identifier.period">
+      <path value="Claim.facility.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Claim.facility.identifier.assigner">
+      <path value="Claim.facility.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Claim.facility.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Claim.facility.display" />
+      <short value="Name " />
+      <max value="0" />
+    </element>
+    <element id="Claim.careTeam">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="CareTeam" />
+      </extension>
+      <path value="Claim.careTeam" />
+      <max value="0" />
+    </element>
+    <element id="Claim.information">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="SpecialCondition" />
+      </extension>
+      <path value="Claim.information" />
+      <max value="0" />
+    </element>
+    <element id="Claim.diagnosis">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Diagnosis" />
+      </extension>
+      <path value="Claim.diagnosis" />
+      <max value="0" />
+    </element>
+    <element id="Claim.procedure.date">
+      <path value="Claim.procedure.date" />
+      <max value="0" />
+    </element>
+    <element id="Claim.procedure.procedure[x]:procedureReference">
+      <path value="Claim.procedure.procedureReference" />
+      <sliceName value="procedureReference" />
+      <short value="List of flu vaccinations included in this claim" />
+      <definition value="List of flu vaccinations included in this claim" />
+      <type>
+        <code value="Reference" />
+        <profile value="http://eps.digital.nhs.uk/fhir/StructureDefinitions/PHarmacyConnect-DM-Immunization-1" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Procedure" />
+      </type>
+    </element>
+    <element id="Claim.insurance">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Insurance" />
+      </extension>
+      <path value="Claim.insurance" />
+      <max value="0" />
+    </element>
+    <element id="Claim.accident">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Accident" />
+      </extension>
+      <path value="Claim.accident" />
+      <max value="0" />
+    </element>
+    <element id="Claim.employmentImpacted">
+      <path value="Claim.employmentImpacted" />
+      <max value="0" />
+    </element>
+    <element id="Claim.hospitalization">
+      <path value="Claim.hospitalization" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.sequence">
+      <path value="Claim.item.sequence" />
+      <short value="Sequence number for the item" />
+      <definition value="Sequence number for the item. This need not reflect the order in which vaccinatons were actually delivered." />
+    </element>
+    <element id="Claim.item.careTeamLinkId">
+      <path value="Claim.item.careTeamLinkId" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.diagnosisLinkId">
+      <path value="Claim.item.diagnosisLinkId" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.procedureLinkId">
+      <path value="Claim.item.procedureLinkId" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.informationLinkId">
+      <path value="Claim.item.informationLinkId" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.revenue">
+      <path value="Claim.item.revenue" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.category">
+      <path value="Claim.item.category" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.service">
+      <path value="Claim.item.service" />
+      <min value="1" />
+    </element>
+    <element id="Claim.item.service.coding">
+      <path value="Claim.item.service.coding" />
+      <definition value="The vaccination delivered" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Vaccination given" />
+        <valueSetUri value="http://eps.digital.nhs.uk/fhir/ValueSets/PharmacyConnect-DM-FluVaccinationProducts" />
+      </binding>
+    </element>
+    <element id="Claim.item.service.coding.system">
+      <path value="Claim.item.service.coding.system" />
+      <short value="Snomed CT/dm+d" />
+      <definition value="A reference to Snomed CT wich is used to code vaccinations" />
+      <min value="1" />
+      <type>
+        <code value="uri" />
+        <profile value="http://snomed.info/sct" />
+      </type>
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Claim.item.service.coding.version">
+      <path value="Claim.item.service.coding.version" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.service.coding.code">
+      <path value="Claim.item.service.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Claim.item.service.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Claim.item.service.coding.display" />
+      <short value="Snomed display name" />
+      <min value="1" />
+    </element>
+    <element id="Claim.item.service.coding.userSelected">
+      <path value="Claim.item.service.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.service.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Claim.item.service.text" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.modifier">
+      <path value="Claim.item.modifier" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.programCode">
+      <path value="Claim.item.programCode" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.serviced[x]">
+      <path value="Claim.item.serviced[x]" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.location[x]">
+      <path value="Claim.item.location[x]" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.quantity">
+      <path value="Claim.item.quantity" />
+      <short value="Count of doses of this vaccine" />
+      <definition value="The number of 0.5ml doses of this product" />
+      <min value="1" />
+    </element>
+    <element id="Claim.item.quantity.value">
+      <path value="Claim.item.quantity.value" />
+      <short value="Integer number of doses" />
+      <definition value="The integer number of doses of 0.5ml of vaccine administered." />
+      <min value="1" />
+    </element>
+    <element id="Claim.item.quantity.unit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Claim.item.quantity.unit" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+        <profile value="dose" />
+      </type>
+      <fixedString value="dose" />
+    </element>
+    <element id="Claim.item.quantity.system">
+      <path value="Claim.item.quantity.system" />
+      <min value="1" />
+    </element>
+    <element id="Claim.item.quantity.code">
+      <path value="Claim.item.quantity.code" />
+      <label value="dose" />
+      <min value="1" />
+      <fixedCode value="3317411000001100" />
+    </element>
+    <element id="Claim.item.unitPrice">
+      <path value="Claim.item.unitPrice" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.factor">
+      <path value="Claim.item.factor" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.net">
+      <path value="Claim.item.net" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.udi">
+      <path value="Claim.item.udi" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.bodySite">
+      <path value="Claim.item.bodySite" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.subSite">
+      <path value="Claim.item.subSite" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.encounter">
+      <path value="Claim.item.encounter" />
+      <max value="0" />
+    </element>
+    <element id="Claim.item.detail">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Detail" />
+      </extension>
+      <path value="Claim.item.detail" />
+      <max value="0" />
+    </element>
+    <element id="Claim.total">
+      <path value="Claim.total" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>
