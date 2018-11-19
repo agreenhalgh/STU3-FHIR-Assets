@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://example.org/fhir/StructureDefinition/Extension-PharmacyConnect-DM-ImmunizationClaim-1" />
+  <name value="Extension-PharmacyConnect-DM-ImmunizationClaim-1" />
+  <status value="draft" />
+  <fhirVersion value="3.0.1" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <contextType value="resource" />
+  <context value="Claim" />
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <min value="1" />
+      <max value="*" />
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://example.org/fhir/StructureDefinition/Extension-PharmacyConnect-DM-ImmunizationClaim-1" />
+    </element>
+    <element id="Extension.value[x]:valueReference">
+      <path value="Extension.valueReference" />
+      <sliceName value="valueReference" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <profile value="immunization" />
+        <targetProfile value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharamacyConnect-DM-Immunization-1" />
+        <aggregation value="contained" />
+      </type>
+    </element>
+    <element id="Extension.value[x]:valueReference.reference">
+      <path value="Extension.valueReference.reference" />
+      <short value="Reference to immunizations included in this claim" />
+      <definition value="Reference to immunizations included in this claim" />
+      <min value="1" />
+    </element>
+    <element id="Extension.value[x]:valueReference.identifier">
+      <path value="Extension.valueReference.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Extension.value[x]:valueReference.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Extension.valueReference.display" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

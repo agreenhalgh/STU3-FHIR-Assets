@@ -114,6 +114,11 @@
       <path value="Immunization.patient" />
       <short value="The patient who was immunized" />
       <definition value="The patient who received the immunization." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
+        <aggregation value="contained" />
+      </type>
     </element>
     <element id="Immunization.patient.reference">
       <path value="Immunization.patient.reference" />

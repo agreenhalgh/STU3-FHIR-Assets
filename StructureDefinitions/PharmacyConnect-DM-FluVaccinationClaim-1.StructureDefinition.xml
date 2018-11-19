@@ -10,6 +10,26 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Claim" />
   <derivation value="constraint" />
   <differential>
+    <element id="Claim.extension">
+      <path value="Claim.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Claim.extension:immunization">
+      <path value="Claim.extension" />
+      <sliceName value="immunization" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://example.org/fhir/StructureDefinition/Extension-PharmacyConnect-DM-ImmunizationClaim-1" />
+      </type>
+    </element>
     <element id="Claim.identifier">
       <path value="Claim.identifier" />
       <min value="1" />
@@ -54,6 +74,11 @@
     <element id="Claim.enterer">
       <path value="Claim.enterer" />
       <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <aggregation value="contained" />
+      </type>
     </element>
     <element id="Claim.enterer.reference">
       <path value="Claim.enterer.reference" />
@@ -256,6 +281,8 @@
     </element>
     <element id="Claim.item.service">
       <path value="Claim.item.service" />
+      <short value="The type of vaccination given" />
+      <definition value="The type of vaccination given, which must be one of the vaccines provided in the service specification." />
       <min value="1" />
     </element>
     <element id="Claim.item.service.coding">
@@ -272,7 +299,7 @@
     <element id="Claim.item.service.coding.system">
       <path value="Claim.item.service.coding.system" />
       <short value="Snomed CT/dm+d" />
-      <definition value="A reference to Snomed CT wich is used to code vaccinations" />
+      <definition value="A reference to Snomed CT which is used to code vaccinations" />
       <min value="1" />
       <type>
         <code value="uri" />
@@ -286,7 +313,14 @@
     </element>
     <element id="Claim.item.service.coding.code">
       <path value="Claim.item.service.coding.code" />
+      <short value="Snomed concept ID" />
+      <definition value="Snomed CT concept ID" />
       <min value="1" />
+      <binding>
+        <strength value="required" />
+        <description value="Vaccine products which can be provided within this service" />
+        <valueSetUri value="http://eps.digital.nhs.uk/" />
+      </binding>
     </element>
     <element id="Claim.item.service.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
