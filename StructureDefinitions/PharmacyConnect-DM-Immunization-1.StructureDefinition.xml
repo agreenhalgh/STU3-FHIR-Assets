@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharamacyConnect-DM-Immunization-1" />
+  <version value="0.0.1" />
   <name value="PharamacyConnect-DM-Immunization-1" />
+  <title value="Immunization information for pharmacy claim" />
   <status value="draft" />
+  <experimental value="true" />
+  <date value="2018-11-20" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
