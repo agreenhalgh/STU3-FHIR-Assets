@@ -595,7 +595,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Claim.extension:immunization.value[x]:valueReference.reference">
+    <element id="Claim.extension:immunization.valueReference:valueReference.reference">
       <path value="Claim.extension.valueReference.reference" />
       <short value="Reference to immunizations included in this claim" />
       <definition value="Reference to immunizations included in this claim" />
@@ -629,7 +629,7 @@
         <map value="N/A" />
       </mapping>
     </element>
-    <element id="Claim.extension:immunization.value[x]:valueReference.identifier">
+    <element id="Claim.extension:immunization.valueReference:valueReference.identifier">
       <path value="Claim.extension.valueReference.identifier" />
       <short value="Logical reference, when literal reference is not known" />
       <definition value="An identifier for the other resource. This is used when there is no way to reference the other resource directly, either because the entity is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference." />
@@ -674,7 +674,7 @@
         <map value=".identifier" />
       </mapping>
     </element>
-    <element id="Claim.extension:immunization.value[x]:valueReference.display">
+    <element id="Claim.extension:immunization.valueReference:valueReference.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
@@ -2813,11 +2813,11 @@
     </element>
     <element id="Claim.facility.reference">
       <path value="Claim.facility.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
-      <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
+      <short value="Pharmacy location giving the vaccination" />
+      <definition value="A reference to the contained resource " />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
-      <min value="0" />
-      <max value="0" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="Reference.reference" />
         <min value="0" />
@@ -2850,8 +2850,8 @@
       <short value="ODS code of pharmacy giving vaccination" />
       <definition value="ODS code of pharmacy giving vaccination" />
       <comment value="When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. &#xA;&#xA;When both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference&#xA;&#xA;Applications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it." />
-      <min value="1" />
-      <max value="1" />
+      <min value="0" />
+      <max value="0" />
       <base>
         <path value="Reference.identifier" />
         <min value="0" />
@@ -8589,6 +8589,21 @@
         <aggregation value="contained" />
       </type>
     </element>
+    <element id="Claim.extension:immunization.valueReference:valueReference.reference">
+      <path value="Claim.extension.valueReference.reference" />
+      <min value="1" />
+    </element>
+    <element id="Claim.extension:immunization.valueReference:valueReference.identifier">
+      <path value="Claim.extension.valueReference.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Claim.extension:immunization.valueReference:valueReference.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Claim.extension.valueReference.display" />
+      <max value="0" />
+    </element>
     <element id="Claim.identifier">
       <path value="Claim.identifier" />
       <min value="1" />
@@ -8717,13 +8732,15 @@
     </element>
     <element id="Claim.facility.reference">
       <path value="Claim.facility.reference" />
-      <max value="0" />
+      <short value="Pharmacy location giving the vaccination" />
+      <definition value="A reference to the contained resource " />
+      <min value="1" />
     </element>
     <element id="Claim.facility.identifier">
       <path value="Claim.facility.identifier" />
       <short value="ODS code of pharmacy giving vaccination" />
       <definition value="ODS code of pharmacy giving vaccination" />
-      <min value="1" />
+      <max value="0" />
     </element>
     <element id="Claim.facility.identifier.use">
       <path value="Claim.facility.identifier.use" />
