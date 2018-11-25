@@ -5947,7 +5947,7 @@
       <binding>
         <strength value="required" />
         <description value="Vaccination given" />
-        <valueSetUri value="http://eps.digital.nhs.uk/fhir/ValueSets/PharmacyConnect-DM-FluVaccinationProducts" />
+        <valueSetUri value="http://eps.digital.nhs.net/fhir/ValueSet/PharmacyConnect-DM-FluVaccinationAdvancedServiceVaccines-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -6169,7 +6169,7 @@
       <binding>
         <strength value="required" />
         <description value="Vaccine products which can be provided within this service" />
-        <valueSetUri value="http://eps.digital.nhs.uk/" />
+        <valueSetUri value="http://eps.digital.nhs.net/fhir/ValueSet/PharmacyConnect-DM-FluVaccinationAdvancedServiceVaccines-1" />
       </binding>
       <mapping>
         <identity value="rim" />
@@ -8891,7 +8891,7 @@
       <binding>
         <strength value="required" />
         <description value="Vaccination given" />
-        <valueSetUri value="http://eps.digital.nhs.uk/fhir/ValueSets/PharmacyConnect-DM-FluVaccinationProducts" />
+        <valueSetUri value="http://eps.digital.nhs.net/fhir/ValueSet/PharmacyConnect-DM-FluVaccinationAdvancedServiceVaccines-1" />
       </binding>
     </element>
     <element id="Claim.item.service.coding.system">
@@ -8917,7 +8917,7 @@
       <binding>
         <strength value="required" />
         <description value="Vaccine products which can be provided within this service" />
-        <valueSetUri value="http://eps.digital.nhs.uk/" />
+        <valueSetUri value="http://eps.digital.nhs.net/fhir/ValueSet/PharmacyConnect-DM-FluVaccinationAdvancedServiceVaccines-1" />
       </binding>
     </element>
     <element id="Claim.item.service.coding.display">
