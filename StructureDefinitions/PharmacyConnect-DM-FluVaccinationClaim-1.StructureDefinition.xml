@@ -4429,7 +4429,7 @@
       <short value="Procedures performed" />
       <definition value="Ordered list of patient procedures performed to support the adjudication." />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Claim.procedure" />
         <min value="0" />
@@ -8802,6 +8802,13 @@
         <valueString value="Diagnosis" />
       </extension>
       <path value="Claim.diagnosis" />
+      <max value="0" />
+    </element>
+    <element id="Claim.procedure">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Procedure" />
+      </extension>
+      <path value="Claim.procedure" />
       <max value="0" />
     </element>
     <element id="Claim.procedure.date">
