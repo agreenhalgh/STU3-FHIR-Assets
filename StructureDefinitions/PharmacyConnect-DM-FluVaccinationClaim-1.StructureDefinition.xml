@@ -1625,7 +1625,7 @@
       <short value="Responsible organization" />
       <definition value="The organization which is responsible for the bill, claim pre-determination, pre-authorization." />
       <comment value="References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository." />
-      <min value="0" />
+      <min value="1" />
       <max value="1" />
       <base>
         <path value="Claim.organization" />
@@ -6793,6 +6793,7 @@
       <type>
         <code value="uri" />
       </type>
+      <fixedUri value="http://snomed.info/sct" />
       <condition value="ele-1" />
       <condition value="qty-3" />
       <constraint>
@@ -8677,6 +8678,10 @@
       <path value="Claim.provider" />
       <max value="0" />
     </element>
+    <element id="Claim.organization">
+      <path value="Claim.organization" />
+      <min value="1" />
+    </element>
     <element id="Claim.organization.reference">
       <path value="Claim.organization.reference" />
       <min value="1" />
@@ -8982,6 +8987,7 @@
     <element id="Claim.item.quantity.system">
       <path value="Claim.item.quantity.system" />
       <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Claim.item.quantity.code">
       <path value="Claim.item.quantity.code" />
