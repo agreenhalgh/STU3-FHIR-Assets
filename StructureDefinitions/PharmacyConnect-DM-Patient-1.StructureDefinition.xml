@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="a4a7b253-47a8-47fb-91e1-737509a8be10" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2018-11-26T00:57:07.319+00:00" />
+  </meta>
   <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-Patient-1" />
   <version value="0.0.1" />
   <name value="PharmacyConnect-DM-Patient-1" />
   <title value="Patient Information for Pharmacy Flu Vaccination Advanced Service Claim" />
   <status value="draft" />
   <experimental value="true" />
-  <date value="2018-11-20" />
+  <date value="2018-11-20T14:11:54.0077969Z" />
   <publisher value="NHS Digital" />
   <contact>
     <name value="DCPM" />
