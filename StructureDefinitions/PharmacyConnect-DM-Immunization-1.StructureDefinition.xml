@@ -1293,7 +1293,7 @@
       <short value="Business identifier" />
       <definition value="A unique identifier assigned to this immunization record." />
       <min value="0" />
-      <max value="*" />
+      <max value="0" />
       <base>
         <path value="Immunization.identifier" />
         <min value="0" />
@@ -8773,6 +8773,10 @@
       <type>
         <code value="Meta" />
       </type>
+    </element>
+    <element id="Immunization.identifier">
+      <path value="Immunization.identifier" />
+      <max value="0" />
     </element>
     <element id="Immunization.identifier.period">
       <path value="Immunization.identifier.period" />
