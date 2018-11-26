@@ -2,13 +2,13 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="36d93aad-7163-4fe6-b1a9-a9815e94d09f" />
   <meta>
-    <versionId value="1" />
-    <lastUpdated value="2018-11-26T16:43:09.127+00:00" />
+    <versionId value="3" />
+    <lastUpdated value="2018-11-26T17:50:07.884+00:00" />
   </meta>
-  <url value="http://example.org/fhir/StructureDefinition/Extension-PharmacyConnect-DM-ImmunizationClaim-1" />
+  <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/Extension-PharmacyConnect-DM-ImmunizationClaim-1" />
   <name value="Extension-PharmacyConnect-DM-ImmunizationClaim-1" />
   <status value="draft" />
-  <date value="2018-11-26T16:43:09.0014604+00:00" />
+  <date value="2018-11-26T17:50:07.6969956+00:00" />
   <fhirVersion value="3.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -147,7 +147,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://example.org/fhir/StructureDefinition/Extension-PharmacyConnect-DM-ImmunizationClaim-1" />
+      <fixedUri value="http://eps.digital.nhs.uk/fhir/StructureDefinition/Extension-PharmacyConnect-DM-ImmunizationClaim-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -402,7 +402,7 @@
     </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://example.org/fhir/StructureDefinition/Extension-PharmacyConnect-DM-ImmunizationClaim-1" />
+      <fixedUri value="http://eps.digital.nhs.uk/fhir/StructureDefinition/Extension-PharmacyConnect-DM-ImmunizationClaim-1" />
     </element>
     <element id="Extension.value[x]:valueReference">
       <path value="Extension.valueReference" />

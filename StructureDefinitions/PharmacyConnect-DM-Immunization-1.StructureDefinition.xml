@@ -2560,7 +2560,7 @@
         <strength value="extensible" />
         <description value="Type of flu vaccine" />
         <valueSetReference>
-          <reference value="http://eps.digital.nhs.uk/fhir/ValueSets/PharmacyConnect-DM-FluImmunisationMedications" />
+          <reference value="http://eps.digital.nhs.uk/fhir/ValueSets/PharmacyConnect-DM-FluImmunizationMedications" />
         </valueSetReference>
       </binding>
       <mapping>
@@ -9124,7 +9124,7 @@
         <strength value="extensible" />
         <description value="Type of flu vaccine" />
         <valueSetReference>
-          <reference value="http://eps.digital.nhs.uk/fhir/ValueSets/PharmacyConnect-DM-FluImmunisationMedications" />
+          <reference value="http://eps.digital.nhs.uk/fhir/ValueSets/PharmacyConnect-DM-FluImmunizationMedications" />
         </valueSetReference>
       </binding>
     </element>
