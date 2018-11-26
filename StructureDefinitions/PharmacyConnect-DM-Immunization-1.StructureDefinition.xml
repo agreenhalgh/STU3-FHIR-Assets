@@ -6318,8 +6318,8 @@
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
-      <min value="0" />
-      <max value="*" />
+      <min value="1" />
+      <max value="1" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -9167,6 +9167,11 @@
     <element id="Immunization.explanation">
       <path value="Immunization.explanation" />
       <min value="1" />
+    </element>
+    <element id="Immunization.explanation.reason.coding">
+      <path value="Immunization.explanation.reason.coding" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Immunization.explanation.reason.coding.system">
       <path value="Immunization.explanation.reason.coding.system" />
