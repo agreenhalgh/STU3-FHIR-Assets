@@ -764,7 +764,7 @@
       <path value="Claim.identifier" />
       <short value="Claim number" />
       <definition value="The business identifier for the instance: claim number, pre-determination or pre-authorization number." />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <base>
         <path value="Claim.identifier" />
@@ -8607,7 +8607,6 @@
     </element>
     <element id="Claim.identifier">
       <path value="Claim.identifier" />
-      <min value="1" />
       <max value="1" />
     </element>
     <element id="Claim.status">

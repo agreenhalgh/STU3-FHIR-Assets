@@ -2,16 +2,16 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="fa1474c7-08b1-4de3-9a29-67a8aee53c41" />
   <meta>
-    <versionId value="2" />
-    <lastUpdated value="2018-11-26T00:57:58.391+00:00" />
+    <versionId value="4" />
+    <lastUpdated value="2018-11-26T15:52:33.006+00:00" />
   </meta>
-  <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DMC-Practitioner-1" />
+  <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-Practitioner-1" />
   <version value="0.0.1" />
   <name value="PharmacyConnect-DM-Practitioner-1" />
   <title value="Practitioner Information for Pharmacy Flu Vaccination Advanced Service Claim" />
   <status value="draft" />
   <experimental value="true" />
-  <date value="2018-11-20T14:12:19.7409064Z" />
+  <date value="2018-11-26T15:37:30.512715Z" />
   <publisher value="NHS Digital" />
   <contact>
     <name value="DCPM" />
