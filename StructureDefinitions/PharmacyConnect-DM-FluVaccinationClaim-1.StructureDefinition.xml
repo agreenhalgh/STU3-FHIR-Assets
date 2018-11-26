@@ -2,8 +2,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="6df44e7a-387f-43c8-b65f-aef0c17ffcfd" />
   <meta>
-    <versionId value="2" />
-    <lastUpdated value="2018-11-20T14:10:16.682+00:00" />
+    <versionId value="3" />
+    <lastUpdated value="2018-11-26T00:56:51.538+00:00" />
     <profile value="http://hl7.org/fhir/StructureDefinition/Claim" />
   </meta>
   <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-FluVaccinationClaim-1" />
@@ -12,7 +12,7 @@
   <title value="Pharmacy Flu Vaccination Advanced Service Claim" />
   <status value="draft" />
   <experimental value="true" />
-  <date value="2018-11-20T13:42:43.8774355Z" />
+  <date value="2018-11-26T00:56:50.9073545+00:00" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
