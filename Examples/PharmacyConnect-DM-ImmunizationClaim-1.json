@@ -5,7 +5,8 @@
       "http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-FluVaccinationClaim-1"
     ]
   },
-  "contained": [{
+  "contained": [
+    {
       "resourceType": "Practitioner",
       "meta": {
         "profile": [
@@ -57,43 +58,44 @@
       }
     },
     {
-      "resourceType": "Immunization",
-      "contained": [{
-        "resourceType": "Patient",
-        "meta": {
-          "profile": [
-            "https://fhir.nhs.uk/STU3/StructureDefinition/PharmacyConnect-DM-Patient-1"
-          ]
-        },
-        "identifier": [{
-          "extension": [{
-            "url": "https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1",
-            "valueCodeableConcept": {
-              "coding": [{
-                "system": "https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-NHSNumberVerificationStatus-1",
-                "code": "01",
-                "display": "Number present and verified"
-              }]
-            }
-          }],
-          "system": "https://fhir.nhs.uk/Id/nhs-number",
-          "value": "9912003888"
+      "resourceType": "Patient",
+      "meta": {
+        "profile": [
+          "https://fhir.nhs.uk/STU3/StructureDefinition/PharmacyConnect-DM-Patient-1"
+        ]
+      },
+      "id": "patient1",
+      "identifier": [{
+        "extension": [{
+          "url": "https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1",
+          "valueCodeableConcept": {
+            "coding": [{
+              "system": "https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-NHSNumberVerificationStatus-1",
+              "code": "01",
+              "display": "Number present and verified"
+            }]
+          }
         }],
-        "name": [{
-          "use": "official",
-          "family": "DAWKINS"
-        }],
-        "gender": "male",
-        "birthDate": "2013-10-12",
-        "address": [{
-          "use": "home",
-          "line": [
-            "4 Sandmoor Drive"
-          ],
-          "city": "DURHAM",
-          "postalCode": "DH1 2TF"
-        }]
+        "system": "https://fhir.nhs.uk/Id/nhs-number",
+        "value": "9912003888"
       }],
+      "name": [{
+        "use": "official",
+        "family": "DAWKINS"
+      }],
+      "gender": "male",
+      "birthDate": "2013-10-12",
+      "address": [{
+        "use": "home",
+        "line": [
+          "4 Sandmoor Drive"
+        ],
+        "city": "DURHAM",
+        "postalCode": "DH1 2TF"
+      }]
+    },
+    {
+      "resourceType": "Immunization",
       "meta": {
         "profile": [
           "http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-Immunization-1"
@@ -145,45 +147,44 @@
       }]
     },
     {
+      "resourceType": "Patient",
+      "meta": {
+        "profile": [
+          "https://fhir.nhs.uk/STU3/StructureDefinition/PharmacyConnect-DM-Patient-1"
+        ]
+      },
+      "id": "patient2",
+      "identifier": [{
+        "extension": [{
+          "url": "https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1",
+          "valueCodeableConcept": {
+            "coding": [{
+              "system": "https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-NHSNumberVerificationStatus-1",
+              "code": "01",
+              "display": "Number present and verified"
+            }]
+          }
+        }],
+        "system": "https://fhir.nhs.uk/Id/nhs-number",
+        "value": "9912003888"
+      }],
+      "name": [{
+        "use": "official",
+        "family": "Smith"
+      }],
+      "gender": "male",
+      "birthDate": "1983-10-12",
+      "address": [{
+        "use": "home",
+        "line": [
+          "17 Sedgewick Crescent"
+        ],
+        "city": "DURHAM",
+        "postalCode": "DH1 2RH"
+      }]
+    },
+    {
       "resourceType": "Immunization",
-      "contained": [{
-          "resourceType": "Patient",
-          "meta": {
-            "profile": [
-              "https://fhir.nhs.uk/STU3/StructureDefinition/PharmacyConnect-DM-Patient-1"
-            ]
-          },
-          "identifier": [{
-            "extension": [{
-              "url": "https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSNumberVerificationStatus-1",
-              "valueCodeableConcept": {
-                "coding": [{
-                  "system": "https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-NHSNumberVerificationStatus-1",
-                  "code": "01",
-                  "display": "Number present and verified"
-                }]
-              }
-            }],
-            "system": "https://fhir.nhs.uk/Id/nhs-number",
-            "value": "9912003888"
-          }],
-          "name": [{
-            "use": "official",
-            "family": "Smith"
-          }],
-          "gender": "male",
-          "birthDate": "1983-10-12",
-          "address": [{
-            "use": "home",
-            "line": [
-              "17 Sedgewick Crescent"
-            ],
-            "city": "DURHAM",
-            "postalCode": "DH1 2RH"
-          }]
-        }
-
-      ],
       "meta": {
         "profile": [
           "http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-Immunization-1"
@@ -225,7 +226,7 @@
           "display": "Seasonal influenza vaccination given by pharmacist (situation)"
         }
       }]
-    },
+    }
   ],
   "extension": [{
       "url": "http://eps.digital.nhs.uk/fhir/StructureDefinition/Extension-PharmacyConnect-DM-ImmunizationClaim-1",
