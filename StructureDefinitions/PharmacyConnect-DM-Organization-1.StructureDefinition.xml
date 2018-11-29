@@ -2,13 +2,13 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="68dfc842-a4bf-4927-82c5-e3889b781ca0" />
   <meta>
-    <versionId value="1" />
-    <lastUpdated value="2018-11-26T15:54:16.062+00:00" />
+    <versionId value="3" />
+    <lastUpdated value="2018-11-29T20:57:18.099+00:00" />
   </meta>
   <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-Organization-1" />
   <name value="PharmacyConnect-DM-Organization-1" />
   <status value="draft" />
-  <date value="2018-11-26T15:54:15.7738585+00:00" />
+  <date value="2018-11-29T20:57:17.8122144+00:00" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -18,7 +18,7 @@
   <snapshot>
     <element id="Organization">
       <path value="Organization" />
-      <short value="A pharmacy providing flu vaccination advanced service" />
+      <short value="A pharmacy providing vaccination advanced service" />
       <definition value="A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, etc." />
       <min value="0" />
       <max value="*" />
@@ -3651,7 +3651,7 @@
   <differential>
     <element id="Organization">
       <path value="Organization" />
-      <short value="A pharmacy providing flu vaccination advanced service" />
+      <short value="A pharmacy providing vaccination advanced service" />
     </element>
     <element id="Organization.extension:mainLocation">
       <path value="Organization.extension" />

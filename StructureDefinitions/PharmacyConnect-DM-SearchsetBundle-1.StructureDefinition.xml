@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="e0b9bec2-3e61-4548-aeab-8462346789e9" />
+  <meta>
+    <versionId value="2" />
+    <lastUpdated value="2018-11-29T20:55:23.901+00:00" />
+  </meta>
   <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-SearchsetBundle-1" />
   <name value="PharmacyConnect-DM-SearchsetBundle-1" />
   <status value="draft" />
+  <date value="2018-11-29T13:39:18.2614681Z" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -265,7 +271,7 @@
     <element id="Bundle.type">
       <path value="Bundle.type" />
       <short value="document | message | transaction | transaction-response | batch | batch-response | history | searchset | collection" />
-      <definition value="Indicates the purpose of this bundle - how it was intended to be used." />
+      <definition value="Indicates that this is a search result" />
       <comment value="It's possible to use a bundle for other purposes (e.g. a document can be accepted as a transaction). This is primarily defined so that there can be specific rules for some of the bundle types." />
       <min value="1" />
       <max value="1" />
@@ -308,8 +314,8 @@
     </element>
     <element id="Bundle.total">
       <path value="Bundle.total" />
-      <short value="If search, the total number of matches" />
-      <definition value="If a set of search matches, this is the total number of matches for the search (as opposed to the number of results in this bundle)." />
+      <short value="Total number of matches" />
+      <definition value="The total number of matches for the search." />
       <comment value="Only used if the bundle is a search result set. The total does not include resources such as OperationOutcome and included resources, only the total number of matching resources." />
       <min value="1" />
       <max value="1" />
@@ -546,8 +552,8 @@
     </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry" />
-      <short value="Entry in the bundle - will have a resource, or information" />
-      <definition value="An entry in a bundle resource - will either contain a resource, or information about a resource (transactions and history only)." />
+      <short value="A single search result" />
+      <definition value="A single search result" />
       <min value="1" />
       <max value="*" />
       <base>
@@ -724,8 +730,8 @@
     </element>
     <element id="Bundle.entry.fullUrl">
       <path value="Bundle.entry.fullUrl" />
-      <short value="Absolute URL for resource (server address, or UUID/OID)" />
-      <definition value="The Absolute URL for the resource.  The fullUrl SHALL not disagree with the id in the resource. The fullUrl is a version independent reference to the resource. The fullUrl element SHALL have a value except that: &#xA;* fullUrl can be empty on a POST (although it does not need to when specifying a temporary id for reference in the bundle)&#xA;* Results from operations might involve resources that are not identified." />
+      <short value="Absolute URL for resource" />
+      <definition value="The Absolute URL for the resource. " />
       <comment value="fullUrl may not be [unique in the context of a resource](bundle.html#bundle-unique). Note that since [FHIR resources do not need to be served through the FHIR API](references.html), the absolute URL may not end with the logical id of the resource (Resource.id), but if the fullUrl does look like a RESTful server URL (e.g. meets the [regex](references.html#regex), then it SHALL end with the Resource.id." />
       <min value="1" />
       <max value="1" />
@@ -1656,10 +1662,13 @@
     </element>
     <element id="Bundle.type">
       <path value="Bundle.type" />
+      <definition value="Indicates that this is a search result" />
       <fixedCode value="searchset" />
     </element>
     <element id="Bundle.total">
       <path value="Bundle.total" />
+      <short value="Total number of matches" />
+      <definition value="The total number of matches for the search." />
       <min value="1" />
     </element>
     <element id="Bundle.link">
@@ -1668,6 +1677,8 @@
     </element>
     <element id="Bundle.entry">
       <path value="Bundle.entry" />
+      <short value="A single search result" />
+      <definition value="A single search result" />
       <min value="1" />
     </element>
     <element id="Bundle.entry.link">
@@ -1676,6 +1687,8 @@
     </element>
     <element id="Bundle.entry.fullUrl">
       <path value="Bundle.entry.fullUrl" />
+      <short value="Absolute URL for resource" />
+      <definition value="The Absolute URL for the resource. " />
       <min value="1" />
     </element>
     <element id="Bundle.entry.resource">
