@@ -1,0 +1,26 @@
+{
+  "resourceType": "Bundle",
+  "meta": {
+    "profile": [
+      "http://eps.digital.nhs.uk/fhir/StrutureDefinition/PharmacyConnect-DM-SearchsetBundle-1/"
+    ]
+  },
+  "type":"searchset",
+  "total":2,
+  "entry":[
+    {
+      "fullUrl":"http://example.nhs.uk/Claim/ab123",
+      "resource":{
+        "resourceType":"Claim"
+        //...
+      }
+    },
+    {
+      "fullUrl":"http://example.nhs.uk/Claim/cd456",
+      "resource":{
+        "resourceType":"Claim"
+        //...
+      }
+    }
+  ]
+}

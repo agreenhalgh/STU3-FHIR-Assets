@@ -1,0 +1,20 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "validationfail",
+  "issue": [
+    {
+      "severity": "error",
+      "code": "required",
+      "details": {
+        "coding":{
+          "code":"0002",
+          "description":"The organisation name is missing",
+          "system":"TODO"
+        }
+      },
+      "location": [
+        "/f:Claim/f:contained[2]/name"
+      ]
+    }
+  ]
+}

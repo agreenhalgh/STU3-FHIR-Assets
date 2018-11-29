@@ -61,7 +61,7 @@
       "resourceType": "Patient",
       "meta": {
         "profile": [
-          "http://eps.digital.nhs.uk/STU3/StructureDefinition/PharmacyConnect-DM-Patient-1"
+          "http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-Patient-1"
         ]
       },
       "id": "patient1",
@@ -150,7 +150,7 @@
       "resourceType": "Patient",
       "meta": {
         "profile": [
-          "http://eps.digital.nhs.uk/STU3/StructureDefinition/PharmacyConnect-DM-Patient-1"
+          "http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-Patient-1"
         ]
       },
       "id": "patient2",

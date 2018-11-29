@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+	<id value="PharmacyConnect-FluVaccineEligibilityCriteria-1"/>
+	<url value="http://eps.digital.nhs.uk/fhir/CodeSystem/PharmacyConnect-FluVaccineEligibilityCriteria-1"/>
+	<version value="1.0.0"/>
+	<name value="Flu Vaccine Eligibility Criteria"/>
+	<status value="draft"/>
+	<date value="2018-11-29T00:00:00+00:00"/>
+	<publisher value="NHS Digital"/>
+	<contact>
+		<name value="DCPM"/>
+		<telecom>
+			<system value="email"/>
+			<value value="dcpm@nhs.net"/>
+			<use value="work"/>
+		</telecom>
+	</contact>
+	<description value="A CodeSystem to identify a patient's Eligibility for flu vaccine."/>
+	<copyright value="Copyright © 2018 NHS Digital"/>
+	<caseSensitive value="true"/>
+	<content value="complete"/>
+	<concept>
+		<code value="102528008"/>
+		<display value="Age more than 65"/>
+	</concept>
+	<concept>
+		<code value="17097001"/>
+		<display value="Chronic (long-term) respiratory disease"/>
+	</concept>
+	<concept>
+		<code value="128238001"/>
+		<display value="Chronic Heart Disease"/>
+	</concept>
+	<concept>
+		<code value="433144002"/>
+		<display value="Chronic Kidney Disease (S3)"/>
+	</concept>
+	<concept>
+		<code value="431857002"/>
+		<display value="Chronic Kidney Disease (S4)"/>
+	</concept>
+	<concept>
+		<code value="433146000"/>
+		<display value="Chronic Kidney Disease (S5)"/>
+	</concept>
+	<concept>
+		<code value="328383001"/>
+		<display value="Chronic Liver Disease"/>
+	</concept>
+	<concept>
+		<code value="CHRONIC_NEUROLOGICAL_DISEASE"/>
+		<display value="Chronic Neurological Disease"/>
+	</concept>
+	<concept>
+		<code value="370391006"/>
+		<display value="Patient Immunosuppressed"/>
+	</concept>
+	<concept>
+		<code value="51244008"/>
+		<display value="Disorder of the spleen"/>
+	</concept>
+	<concept>
+		<code value="707147002"/>
+		<display value="Asplenia"/>
+	</concept>
+	<concept>
+		<code value="238136002"/>
+		<display value="Morbid obesity"/>
+	</concept>
+	<concept>
+		<code value="77386006"/>
+		<display value="Pregnant Woman"/>
+	</concept>
+	<concept>
+		<code value="719101000000105"/>
+		<display value="Residential Care"/>
+	</concept>
+	<concept>
+		<code value="185903001"/>
+		<display value="Social Care "/>
+	</concept>
+	<concept>
+		<code value="HOSPICE_WORKER"/>
+		<display value="Hospice Worker"/>
+	</concept>
+	<concept>
+		<code value="229774002"/>
+		<display value="Carer"/>
+	</concept>
+	<concept>
+		<code value="CONTACT_OF_IMMUNOCOMPROMISED_INDIVIDUALS"/>
+		<display value="Contact of Immunocompromised individuals"/>
+	</concept>
+</CodeSystem>
