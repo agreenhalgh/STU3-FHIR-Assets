@@ -2,8 +2,8 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="7dc0aa8c-3fe8-4999-a9e9-f1d33d4c9d94" />
   <meta>
-    <versionId value="12" />
-    <lastUpdated value="2018-11-27T22:18:30.795+00:00" />
+    <versionId value="14" />
+    <lastUpdated value="2018-11-29T20:56:48.43+00:00" />
   </meta>
   <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-Immunization-1" />
   <version value="0.0.1" />
@@ -11,7 +11,7 @@
   <title value="Immunization information for pharmacy claim" />
   <status value="draft" />
   <experimental value="true" />
-  <date value="2018-11-27T22:18:30.0281394+00:00" />
+  <date value="2018-11-29T20:56:47.5481045+00:00" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -22,7 +22,7 @@
     <element id="Immunization">
       <path value="Immunization" />
       <short value="Immunization event information" />
-      <definition value="Describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party and may include vaccine reaction information and what vaccination protocol was followed." />
+      <definition value="Describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a clinician." />
       <min value="0" />
       <max value="*" />
       <base>
@@ -942,8 +942,8 @@
     <element id="Immunization.extension:vaccinationProcedure">
       <path value="Immunization.extension" />
       <sliceName value="vaccinationProcedure" />
-      <short value="Additional Content defined by implementations" />
-      <definition value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension." />
+      <short value="Reference to the fixed coded vaccination procedure" />
+      <definition value="Fixed coded vaccination procedure" />
       <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone." />
       <alias value="extensions" />
       <alias value="user content" />
@@ -1208,7 +1208,7 @@
     <element id="Immunization.extension:vaccinationProcedure.value[x]:valueCoding.system">
       <path value="Immunization.extension.valueCoding.system" />
       <short value="Identity of the terminology system" />
-      <definition value="The identification of the code system that defines the meaning of the symbol in the code." />
+      <definition value="Reference to Snomed CT" />
       <comment value="The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously." />
       <requirements value="Need to be unambiguous about the source of the definition of the symbol." />
       <min value="1" />
@@ -1291,7 +1291,7 @@
     </element>
     <element id="Immunization.extension:vaccinationProcedure.value[x]:valueCoding.code">
       <path value="Immunization.extension.valueCoding.code" />
-      <short value="Symbol in syntax defined by the system" />
+      <short value="Fixed Snomed code for flu vaccination" />
       <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
@@ -1337,7 +1337,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Immunization.extension.valueCoding.display" />
-      <short value="Representation defined by the system" />
+      <short value="Snomed description" />
       <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
@@ -2317,7 +2317,7 @@
     <element id="Immunization.vaccineCode.coding">
       <path value="Immunization.vaccineCode.coding" />
       <short value="Code defined by a terminology system" />
-      <definition value="A reference to a code defined by a terminology system." />
+      <definition value="A reference to Snomed CT" />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
       <min value="1" />
@@ -2533,8 +2533,8 @@
     </element>
     <element id="Immunization.vaccineCode.coding.code">
       <path value="Immunization.vaccineCode.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
-      <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
+      <short value="Snomed Concept ID" />
+      <definition value="Snomed Concept ID" />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
       <min value="1" />
@@ -2585,8 +2585,8 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Immunization.vaccineCode.coding.display" />
-      <short value="Representation defined by the system" />
-      <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
+      <short value="Snomed Description" />
+      <definition value="Snomed Description" />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
       <min value="1" />
@@ -2727,7 +2727,7 @@
       <type>
         <code value="Reference" />
         <profile value="http://eps.digital.nhs.uk/fhir/PharmacyConnect-DM-Patient-1" />
-        <targetProfile value="http://eps.digital.nhs.uk/fhir/PharmacyConnect-DM-Patient-1" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
         <aggregation value="contained" />
       </type>
       <condition value="ele-1" />
@@ -2850,8 +2850,8 @@
     </element>
     <element id="Immunization.patient.reference">
       <path value="Immunization.patient.reference" />
-      <short value="Literal reference, Relative, internal or absolute URL" />
-      <definition value="A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources." />
+      <short value="Internal URL to contained patient" />
+      <definition value="A reference the contained Patient resource. Internal fragment references (start with '#') refer to contained resources." />
       <comment value="Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure &quot;/[type]/[id]&quot; then it should be assumed that the reference is to a FHIR RESTful server." />
       <min value="1" />
       <max value="1" />
@@ -6211,8 +6211,8 @@
     </element>
     <element id="Immunization.explanation">
       <path value="Immunization.explanation" />
-      <short value="Administration/non-administration reasons" />
-      <definition value="Reasons why a vaccine was or was not administered." />
+      <short value="Administration reasons" />
+      <definition value="Reasons why a vaccine was administered." />
       <min value="1" />
       <max value="1" />
       <base>
@@ -6372,6 +6372,7 @@
       </base>
       <type>
         <code value="CodeableConcept" />
+        <profile value="http://eps.digital.nhs.uk/fhir/CodeSystem/PharmacyConnect-FluVaccineEligibilityCriteria-1" />
       </type>
       <condition value="ele-1" />
       <constraint>
@@ -6500,8 +6501,8 @@
       <definition value="A reference to a code defined by a terminology system." />
       <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true." />
       <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings." />
-      <min value="1" />
-      <max value="1" />
+      <min value="0" />
+      <max value="*" />
       <base>
         <path value="CodeableConcept.coding" />
         <min value="0" />
@@ -6641,8 +6642,8 @@
       </base>
       <type>
         <code value="uri" />
-        <profile value="http://eps.digital.nhs.uk/fhir/ValueSet/PharmacyConnect-DM-FluEligiblePatientGroup" />
       </type>
+      <fixedUri value="http://eps.digital.nhs.uk/fhir/CodeSystem/PharmacyConnect-FluVaccineEligibilityCriteria-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -6652,11 +6653,6 @@
         <xpath value="@value|f:*|h:div" />
       </constraint>
       <isSummary value="true" />
-      <binding>
-        <strength value="required" />
-        <description value="Eligible Patient Groups" />
-        <valueSetUri value="http://eps.digital.nhs.uk/fhir/ValueSet/PharmacyConnect-DM-FluEligiblePatientGroup" />
-      </binding>
       <mapping>
         <identity value="rim" />
         <map value="n/a" />
@@ -6717,8 +6713,8 @@
     </element>
     <element id="Immunization.explanation.reason.coding.code">
       <path value="Immunization.explanation.reason.coding.code" />
-      <short value="Symbol in syntax defined by the system" />
-      <definition value="A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination)." />
+      <short value="Code indicating reason for immunization" />
+      <definition value="Code indicating reason for immunization" />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="Need to refer to a particular code in the system." />
       <min value="1" />
@@ -6762,8 +6758,8 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Immunization.explanation.reason.coding.display" />
-      <short value="Representation defined by the system" />
-      <definition value="A representation of the meaning of the code in the system, following the rules of the system." />
+      <short value="Display name associated with the code" />
+      <definition value="Display name associated with the code" />
       <comment value="Note that FHIR strings may not exceed 1MB in size" />
       <requirements value="Need to be able to carry a human-readable meaning of the code for readers that do not know  the system." />
       <min value="1" />
@@ -9016,6 +9012,10 @@
     </element>
   </snapshot>
   <differential>
+    <element id="Immunization">
+      <path value="Immunization" />
+      <definition value="Describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a clinician." />
+    </element>
     <element id="Immunization.extension:parentPresent">
       <path value="Immunization.extension" />
       <sliceName value="parentPresent" />
@@ -9029,6 +9029,8 @@
     <element id="Immunization.extension:vaccinationProcedure">
       <path value="Immunization.extension" />
       <sliceName value="vaccinationProcedure" />
+      <short value="Reference to the fixed coded vaccination procedure" />
+      <definition value="Fixed coded vaccination procedure" />
     </element>
     <element id="Immunization.extension:vaccinationProcedure.value[x]:valueCoding">
       <path value="Immunization.extension.valueCoding" />
@@ -9040,6 +9042,7 @@
     </element>
     <element id="Immunization.extension:vaccinationProcedure.value[x]:valueCoding.system">
       <path value="Immunization.extension.valueCoding.system" />
+      <definition value="Reference to Snomed CT" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
@@ -9049,6 +9052,7 @@
     </element>
     <element id="Immunization.extension:vaccinationProcedure.value[x]:valueCoding.code">
       <path value="Immunization.extension.valueCoding.code" />
+      <short value="Fixed Snomed code for flu vaccination" />
       <min value="1" />
       <fixedCode value="955691000000108" />
     </element>
@@ -9057,6 +9061,7 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Immunization.extension.valueCoding.display" />
+      <short value="Snomed description" />
       <min value="1" />
       <fixedString value="Seasonal influenza vaccination given by pharmacist (situation)" />
     </element>
@@ -9101,6 +9106,7 @@
     </element>
     <element id="Immunization.vaccineCode.coding">
       <path value="Immunization.vaccineCode.coding" />
+      <definition value="A reference to Snomed CT" />
       <min value="1" />
       <max value="1" />
     </element>
@@ -9119,6 +9125,8 @@
     </element>
     <element id="Immunization.vaccineCode.coding.code">
       <path value="Immunization.vaccineCode.coding.code" />
+      <short value="Snomed Concept ID" />
+      <definition value="Snomed Concept ID" />
       <min value="1" />
       <binding>
         <strength value="extensible" />
@@ -9133,6 +9141,8 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Immunization.vaccineCode.coding.display" />
+      <short value="Snomed Description" />
+      <definition value="Snomed Description" />
       <min value="1" />
     </element>
     <element id="Immunization.vaccineCode.coding.userSelected">
@@ -9153,12 +9163,14 @@
       <type>
         <code value="Reference" />
         <profile value="http://eps.digital.nhs.uk/fhir/PharmacyConnect-DM-Patient-1" />
-        <targetProfile value="http://eps.digital.nhs.uk/fhir/PharmacyConnect-DM-Patient-1" />
+        <targetProfile value="https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1" />
         <aggregation value="contained" />
       </type>
     </element>
     <element id="Immunization.patient.reference">
       <path value="Immunization.patient.reference" />
+      <short value="Internal URL to contained patient" />
+      <definition value="A reference the contained Patient resource. Internal fragment references (start with '#') refer to contained resources." />
       <min value="1" />
     </element>
     <element id="Immunization.patient.identifier">
@@ -9263,25 +9275,21 @@
     </element>
     <element id="Immunization.explanation">
       <path value="Immunization.explanation" />
+      <short value="Administration reasons" />
+      <definition value="Reasons why a vaccine was administered." />
       <min value="1" />
     </element>
-    <element id="Immunization.explanation.reason.coding">
-      <path value="Immunization.explanation.reason.coding" />
-      <min value="1" />
-      <max value="1" />
+    <element id="Immunization.explanation.reason">
+      <path value="Immunization.explanation.reason" />
+      <type>
+        <code value="CodeableConcept" />
+        <profile value="http://eps.digital.nhs.uk/fhir/CodeSystem/PharmacyConnect-FluVaccineEligibilityCriteria-1" />
+      </type>
     </element>
     <element id="Immunization.explanation.reason.coding.system">
       <path value="Immunization.explanation.reason.coding.system" />
       <min value="1" />
-      <type>
-        <code value="uri" />
-        <profile value="http://eps.digital.nhs.uk/fhir/ValueSet/PharmacyConnect-DM-FluEligiblePatientGroup" />
-      </type>
-      <binding>
-        <strength value="required" />
-        <description value="Eligible Patient Groups" />
-        <valueSetUri value="http://eps.digital.nhs.uk/fhir/ValueSet/PharmacyConnect-DM-FluEligiblePatientGroup" />
-      </binding>
+      <fixedUri value="http://eps.digital.nhs.uk/fhir/CodeSystem/PharmacyConnect-FluVaccineEligibilityCriteria-1" />
     </element>
     <element id="Immunization.explanation.reason.coding.version">
       <path value="Immunization.explanation.reason.coding.version" />
@@ -9289,6 +9297,8 @@
     </element>
     <element id="Immunization.explanation.reason.coding.code">
       <path value="Immunization.explanation.reason.coding.code" />
+      <short value="Code indicating reason for immunization" />
+      <definition value="Code indicating reason for immunization" />
       <min value="1" />
     </element>
     <element id="Immunization.explanation.reason.coding.display">
@@ -9296,6 +9306,8 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Immunization.explanation.reason.coding.display" />
+      <short value="Display name associated with the code" />
+      <definition value="Display name associated with the code" />
       <min value="1" />
     </element>
     <element id="Immunization.explanation.reason.coding.userSelected">

@@ -2,14 +2,14 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="f986daee-8aa7-4ec1-aeda-0f171f2e4872" />
   <meta>
-    <versionId value="1" />
-    <lastUpdated value="2018-11-28T11:03:02.326+00:00" />
+    <versionId value="3" />
+    <lastUpdated value="2018-11-29T20:55:46.66+00:00" />
   </meta>
   <url value="http://eps.digital.nhs.uk/fhir/StructureDefinition/PharmacyConnect-DM-OperationOutcome-1" />
   <name value="PharmacyConnect-DM-OperationOutcome-1" />
   <status value="draft" />
   <experimental value="true" />
-  <date value="2018-11-28T11:03:02.1966887+00:00" />
+  <date value="2018-11-29T20:55:46.4886675+00:00" />
   <fhirVersion value="3.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -914,7 +914,7 @@
       <type>
         <code value="uri" />
       </type>
-      <fixedUri value="http://eps.digital.nhs.uk/fhir/STU3/ValueSet/PharmacyConnect-DM-ErrorOrWarningCode-1" />
+      <fixedUri value="http://eps.digital.nhs.uk/fhir/ValueSet/PharmacyConnect-DM-ErrorOrWarningCode-1" />
       <condition value="ele-1" />
       <constraint>
         <key value="ele-1" />
@@ -1283,7 +1283,7 @@
     <element id="OperationOutcome.issue.details.coding.system">
       <path value="OperationOutcome.issue.details.coding.system" />
       <min value="1" />
-      <fixedUri value="http://eps.digital.nhs.uk/fhir/STU3/ValueSet/PharmacyConnect-DM-ErrorOrWarningCode-1" />
+      <fixedUri value="http://eps.digital.nhs.uk/fhir/ValueSet/PharmacyConnect-DM-ErrorOrWarningCode-1" />
     </element>
     <element id="OperationOutcome.issue.details.coding.version">
       <path value="OperationOutcome.issue.details.coding.version" />
